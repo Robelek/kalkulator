@@ -1,0 +1,62 @@
+@charset "utf-8";
+.grid-kontener
+{
+	display:grid;
+	grid-template-columns: auto auto auto auto;
+	background-color: darkblue;
+}
+#wynik
+{
+	color: black;
+	display: block;
+	background: white;
+	border: solid 0.1em black;
+	width:auto;
+	float:left;
+	font-weight: bold;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+}
+#centrum
+{
+	display:flex;
+	justify-content: center;
+}
+
+table
+{
+	clear: both;
+	background-color: darkgray;
+	border: solid black;
+}
+h1 {
+	color: #bcfff6;
+	font-size: 100%*50;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+html
+{
+	height: 100%;
+	background-image: linear-gradient(to bottom right, rgb(22, 3, 107), rgb(134, 156, 255));
+	background-repeat: no-repeat;
+	
+}
+button {
+	width:100%;
+	height:100%;
+	padding: 1em 2em;
+	display: block;
+	font-weight: bolder;
+	font-size: 100%;
+	background-color: lightblue;
+	transition: color 1s;
+	
+}
+button:hover
+{
+	color:blue;
+}
