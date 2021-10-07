@@ -27,26 +27,26 @@ function wyswietl()
 {
 	numer1= +numer1;
 	numer2= +numer2;
-	if(dzialanie=="-")
+	switch(dzialanie)
 	{
-		wynik = numer1-numer2;
-		
-	}
-	else if(dzialanie =="+")
-	{
-		wynik =numer1+numer2;
-	}
-	else if(dzialanie =="*")
-	{
-		wynik =numer1*numer2;
-	}
-	else if(dzialanie =="/")
-	{
-		wynik =numer1/numer2;
-	}
-	else if (dzialanie =="")
-	{
-		wynik = "BLAD";
+		case "-":
+			wynik = numer1-numer2;
+			break;
+	
+		case "+":
+			wynik =numer1+numer2;
+			break;
+	
+		case "*":
+			wynik =numer1*numer2;
+			break;
+	
+		case "/":
+			wynik =numer1/numer2;
+			break;
+	
+		default:
+			wynik = "BLAD";
 	}
 	document.getElementById("wynik").innerHTML = wynik;
 	//alert(numer1);

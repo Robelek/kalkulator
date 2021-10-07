@@ -1,5 +1,10 @@
 @charset "utf-8";
-
+.grid-kontener
+{
+	display:grid;
+	grid-template-columns: auto auto auto auto;
+	background-color: darkblue;
+}
 #wynik
 {
 	color: black;
@@ -25,7 +30,7 @@ table
 	border: solid black;
 }
 h1 {
-	color: #fdfdfd;
+	color: #bcfff6;
 	font-size: 100%*50;
 	text-align: center;
 	display: block;
@@ -33,9 +38,12 @@ h1 {
 	margin-right: auto;
 	
 }
-body
+html
 {
-	background-color: #746D69;
+	height: 100%;
+	background-image: linear-gradient(to bottom right, rgb(22, 3, 107), rgb(134, 156, 255));
+	background-repeat: no-repeat;
+	
 }
 button {
 	width:100%;
@@ -44,13 +52,11 @@ button {
 	display: block;
 	font-weight: bolder;
 	font-size: 100%;
+	background-color: lightblue;
+	transition: color 1s;
 	
 }
 button:hover
 {
-	color:red;
-}
-tr
-{
-	height: 4em;
+	color:blue;
 }
