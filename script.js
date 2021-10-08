@@ -18,13 +18,33 @@ function wybierz(a)
 	
 		if(!wybieranumer2)
 		{
-		numer1+=a;
-		document.getElementById("wynik").innerHTML = numer1;
+			if(a=="DEL")
+			{
+				numer1="";
+				
+
+			}
+			else
+			{
+				numer1+=a;
+				
+			}
+			softwyswietl(numer1);
+			
 		}
 		else
 		{
-		numer2+=a;
-		document.getElementById("wynik").innerHTML = numer2;
+			if(a=="DEL")
+			{
+				numer2="";
+				
+			}
+			else
+			{
+				numer2+=a;
+				
+			}
+			softwyswietl(numer2);
 		}
 
 	
@@ -33,8 +53,19 @@ function dzialanko(a)
 {
 	wybieranumer2 = true;
 	dzialanie=a;
+	if(dzialanie=="pierw")
+	{
+		wyswietl();
+	}
 }
-
+function softwyswietl(a)
+{
+	if(a=="")
+	{
+		a=0;
+	}
+	document.getElementById("wynik").innerHTML = a;
+}
 
 function wyswietl()
 {
@@ -61,12 +92,15 @@ function wyswietl()
 		case "/":
 			wynik =numer1/numer2;
 			break;
-	
+		case "pierw":
+			wynik = Math.sqrt(numer1)
+			break;
 		default:
 			wynik = "BLAD";
 	}
-	document.getElementById("wynik").innerHTML = wynik;
 	wykonaldzialanie=true;
+	document.getElementById("wynik").innerHTML = wynik;
+	
 	//alert(numer1);
 	//numer1 = "";
 	//numer2= "";

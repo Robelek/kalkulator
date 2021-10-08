@@ -5,6 +5,10 @@
 	grid-template-columns: auto auto auto auto;
 	background-color: darkblue;
 }
+.grid-przesun
+{
+	grid-column-start: 3;
+}
 #wynik
 {
 	color: black;
