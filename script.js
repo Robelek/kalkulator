@@ -2,19 +2,32 @@ let numer1= "";
 let numer2= "";
 let wynik ="";
 let wybieranumer2 = false;
+let wykonaldzialanie = false;
 let dzialanie = "";
 function wybierz(a)
 {
-	if(!wybieranumer2)
+	if(wykonaldzialanie)
 	{
+		wykonaldzialanie=false;	
+		numer1 = "";
+		numer2= "";
+		dzialanie="";
+		wybieranumer2 = false;
+
+	}
+	
+		if(!wybieranumer2)
+		{
 		numer1+=a;
 		document.getElementById("wynik").innerHTML = numer1;
-	}
-	else
-	{
+		}
+		else
+		{
 		numer2+=a;
 		document.getElementById("wynik").innerHTML = numer2;
-	}
+		}
+
+	
 }
 function dzialanko(a)
 {
@@ -25,6 +38,10 @@ function dzialanko(a)
 
 function wyswietl()
 {
+	if(wykonaldzialanie)
+	{
+		numer1=wynik;
+	}
 	numer1= +numer1;
 	numer2= +numer2;
 	switch(dzialanie)
@@ -49,10 +66,11 @@ function wyswietl()
 			wynik = "BLAD";
 	}
 	document.getElementById("wynik").innerHTML = wynik;
+	wykonaldzialanie=true;
 	//alert(numer1);
-	numer1 = "";
-	numer2= "";
-	dzialanie="";
-	wybieranumer2 = false;
+	//numer1 = "";
+	//numer2= "";
+	//dzialanie="";
+	//wybieranumer2 = false;
 }
 	
